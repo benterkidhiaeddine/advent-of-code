@@ -1,9 +1,7 @@
 # print(dimensions(lines))
 import os
 
-input_file_path = os.path.abspath(
-    "/home/dhia/repos/python/advent-of-code/2024/4/part2/input.txt"
-)
+input_file_path = os.path.abspath("input.txt")
 f = open(input_file_path, "r")
 
 

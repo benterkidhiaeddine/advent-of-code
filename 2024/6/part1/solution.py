@@ -106,10 +106,8 @@ for i in range(n):
     for j in range(m):
         if lines[i][j] == UP:
             ix, iy = j, i
-
+unique_positions.add((ix, iy))
 M = copy_matrix(lines)
-print(ix, iy)
-print(translate_matrix_to_map(M))
 while ix != 0 and ix != m - 1 and iy != 0 and iy != n - 1:
     if M[iy][ix] == UP:
         M, ix, iy = keep_moving_up(M, ix, iy)
@@ -128,12 +126,5 @@ while ix != 0 and ix != m - 1 and iy != 0 and iy != n - 1:
 print(len(unique_positions))
 
 
-# updated_matrix = keep_moving_up(lines, ix, iy)
-# updated_matrix = translate_matrix_to_map(updated_matrix)
-# print(updated_matrix)
 
-result = 0
-
-
-# print(result)
 f.close()
